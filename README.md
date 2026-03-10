@@ -8,9 +8,9 @@ This workflow takes a transcript from a team discussion about a project and guid
 
 ## Getting Started
 
-See the setup guide in `outputs/setup-guide.md` for full instructions, including prerequisites and how to run the workflow.
+See the [Setup Guide](docs/setup-guide.md) for full instructions, including prerequisites and how to run the workflow.
 
-If you are running the meeting that generates the transcript, see `outputs/facilitator-guide.md` for guidance on how to structure the conversation to get the best results.
+If you are running the meeting that generates the transcript, see the [Facilitator Guide](docs/facilitator-guide.md) for guidance on how to structure the conversation to get the best results.
 
 ## Output Documents
 
