@@ -18,6 +18,10 @@ If you are running the meeting that generates the transcript, see the [Facilitat
 - Internal Slack update
 - External success story
 
+## Contributing
+
+This project is a personal learning project and is not currently open for contributions or pull requests. Feel free to clone and use it, but please do not submit changes for review.
+
 ## Licence
 
 MIT — see `LICENSE` for details.
