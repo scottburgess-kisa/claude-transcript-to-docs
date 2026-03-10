@@ -1,0 +1,25 @@
+# Transcript inputs — keep folder, ignore contents
+transcripts/*
+!transcripts/.gitkeep
+
+# Working files — keep folder, ignore contents
+working/*
+!working/.gitkeep
+
+# Generated outputs — keep folder, ignore contents
+outputs/*
+!outputs/.gitkeep
+
+# Claude Code local folder
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+*:Zone.Identifier
