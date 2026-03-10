@@ -14,6 +14,33 @@ typically cover some or all of the following:
 - How those problems were overcome
 - Lessons learned along the way
 
+## Data Sensitivity Check
+Before reading the transcript, display the following notice to the user
+and wait for their confirmation before proceeding:
+
+---
+Before we begin, please confirm you are happy to continue.
+
+The contents of your transcript will be processed by Claude, whose
+servers are based in the United States. This means the transcript
+content will be sent to and processed on US-based infrastructure.
+
+Please make sure your transcript does not contain:
+- Personal data about individuals
+- Commercially sensitive information such as contract values or financials
+- Client information that is confidential or covered by an NDA
+- Any data subject to UK GDPR or government security classifications
+
+Type YES to confirm you are happy to continue, or NO to stop.
+---
+
+If the user types YES, proceed with the skill as normal.
+If the user types NO or anything other than YES, stop immediately,
+do not read the transcript, and display the following message:
+
+"Workflow stopped. No data has been processed. Please review your
+transcript before trying again."
+
 ## Instructions
 - Read the transcript file provided in the transcripts/ folder
 - Extract all key information listed in the output format below
