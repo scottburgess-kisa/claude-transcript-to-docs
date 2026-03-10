@@ -29,7 +29,7 @@ Please make sure your transcript does not contain:
 - Personal data about individuals
 - Commercially sensitive information such as contract values or financials
 - Client information that is confidential or covered by an NDA
-- Any data subject to UK GDPR or government security classifications
+- Any data subject to UK GDPR or government security classifications that prohibit sharing with third-party services
 
 Type YES to confirm you are happy to continue, or NO to stop.
 ---

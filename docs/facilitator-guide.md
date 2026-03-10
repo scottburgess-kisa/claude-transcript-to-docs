@@ -31,7 +31,7 @@ Participants should not share anything during the session that they would not be
 - Personal data about individuals
 - Commercially sensitive information such as contract values, rates, or financials
 - Client information that is confidential or covered by an NDA
-- Any data that is subject to UK GDPR or government security classifications
+- Any data subject to UK GDPR or government security classifications that prohibit sharing with third-party services
 
 If in doubt, leave it out. The workflow produces better outputs from high-level discussion than from sensitive detail anyway.
 
