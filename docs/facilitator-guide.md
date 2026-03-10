@@ -20,6 +20,23 @@ Once the meeting ends, download the transcript as a .docx or text file. Drop it 
 
 ---
 
+## Before You Start: A Note on Sensitive Information
+
+Before the meeting begins, make the following clear to all participants.
+
+The transcript from this session will be processed by Claude, an AI tool whose servers are based in the United States. This means anything said in the meeting may be sent to and processed on US-based infrastructure.
+
+Participants should not share anything during the session that they would not be comfortable sending outside of the UK or outside of their organisation. This includes:
+
+- Personal data about individuals
+- Commercially sensitive information such as contract values, rates, or financials
+- Client information that is confidential or covered by an NDA
+- Any data that is subject to UK GDPR or government security classifications
+
+If in doubt, leave it out. The workflow produces better outputs from high-level discussion than from sensitive detail anyway.
+
+---
+
 ## Running the Session
 
 The conversation works best when it is informal and flowing. You are not conducting interviews — you are having a team discussion that happens to be recorded. The more people talk naturally, the better the outputs will be.
