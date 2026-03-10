@@ -8,7 +8,7 @@ This workflow takes a transcript from a team discussion about a project and guid
 
 ## Getting Started
 
-See the [Setup Guide](docs/setup-guide.md) for full instructions, including prerequisites and how to run the workflow.
+See the [Windows Setup Guide (Claude Desktop App)](docs/setup-guide.md) for full instructions, including prerequisites and how to run the workflow on Windows using the Claude desktop app.
 
 If you are running the meeting that generates the transcript, see the [Facilitator Guide](docs/facilitator-guide.md) for guidance on how to structure the conversation to get the best results.
 
