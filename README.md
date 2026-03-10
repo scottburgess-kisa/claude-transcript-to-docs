@@ -6,6 +6,12 @@ Turn a meeting transcript into a blog post, Slack update, and success story usin
 
 This workflow takes a transcript from a team discussion about a project and guides you through a series of stages to produce polished output documents. It asks clarifying questions along the way to fill gaps and tailor the content before generating anything.
 
+## Data and Privacy
+
+This workflow processes transcript content using Claude, whose servers are based in the United States. Any content passed through the workflow may be sent to and processed on US-based infrastructure.
+
+Do not use this workflow with transcripts that contain personal data, commercially sensitive information, content covered by an NDA, or anything subject to UK GDPR or government security classifications.
+
 ## Getting Started
 
 See the [Windows Setup Guide (Claude Desktop App)](docs/setup-guide.md) for full instructions, including prerequisites and how to run the workflow on Windows using the Claude desktop app.
