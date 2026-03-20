@@ -12,43 +12,25 @@ It receives enriched JSON data about a project and transforms it
 into a polished blog post ready for publishing or light editing.
 
 ## Instructions
-Before generating the blog post, ask the user three questions:
+Generate the blog post directly from the enriched JSON data.
+All required information has been gathered in the clarify stage.
 
-### Pre-Generation Questions
-1. Who will be posting this blog? This person should not be quoted
-   in the post, as it would be strange for the author to quote themselves.
-   Check the team_or_individuals field in the JSON and exclude that
-   person from any direct quotes used in the content.
+### Blog Generation Process
+1. Read the author from `blog_post.author` field
+   - Do NOT quote this person in the post
+   - Exclude them from any direct quotes in the content
 
-2. How long would you like the blog post to be?
-   - Short (300-500 words) — default if not specified
+2. Use the length from `blog_post.length` field:
+   - Short (300-500 words)
    - Medium (600-900 words)
    - Long (1000-1500 words)
 
-3. Review the enriched JSON and identify which of the following 
-   sections have enough content to be worth including:
-   - Introduction
-   - The Challenge — only suggest if problems_faced is populated
-   - Our Approach — only suggest if solution_used or 
-     tools_or_methods is populated
-   - The Results — only suggest if measurable_results or 
-     outcome is populated
-   - Lessons Learned — only suggest if lessons_learned 
-     is populated
-   - Call to Action — always suggest this as an option
+3. Use the sections from `blog_post.sections` array
+   - Only include sections that were selected during clarification
+   - Use the technical level from `blog_post.technical_level`
 
-   Present the user with only the sections that have supporting 
-   content in the JSON, clearly marked as recommended.
-   Allow the user to add or remove any sections they want.
-   If the user is unsure, proceed with all recommended sections.
-
-   If the JSON contains information that does not fit neatly into 
-   the sections above but would make a valuable standalone section, 
-   suggest it with a brief explanation of why it would add value.
-   For example, if the JSON contains a strong client reaction, 
-   suggest a "What the Client Said" section.
-
-Once the user has answered, generate the blog post.
+4. Generate the complete blog post autonomously using all
+   enriched JSON data without any user interaction.
 
 ## Tone and Style
 Follow all rules in: skills/rules-style-guide.md
@@ -71,14 +53,8 @@ Additional rules for this document:
 ## Output
 Save the blog post to: outputs/blog-post.md
 
-Also display the full blog post in the conversation so the 
-user can read and review it immediately.
-
-After displaying it, ask:
-"Are you happy with this, or would you like any changes?"
-
-If the user requests changes, make them and display the 
-updated version. Repeat until the user is satisfied.
+The blog post will be generated autonomously for agent execution.
+No user interaction or revision loops are required.
 
 ## Input
 The enriched JSON output from: skills/clarify/SKILL.md

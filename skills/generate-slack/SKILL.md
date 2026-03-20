@@ -11,29 +11,26 @@ into a Slack post for internal consultancy updates.
 The audience is colleagues who want to know what the team has 
 achieved — quickly and enthusiastically.
 
-## Pre-Generation Questions
-Before generating, ask the user:
+## Generation Instructions
+Generate the Slack post directly from the enriched JSON data.
+All required information has been gathered in the clarify stage.
 
-1. Who will be posting this message? The post should be written from
-   their first-person perspective ("we did X", "I was impressed by Y").
-   That person should not be quoted or referred to in the third person.
-   Check the team_or_individuals field in the JSON and write the post
-   as if it is coming from their point of view.
+### Slack Generation Process
+1. Read the author from `slack_update.author` field
+   - Write from their first-person perspective ("we did X", "I was impressed by Y")
+   - Do NOT quote or refer to this person in third person
 
-2. Which Slack channel or audience is this for?
-   Use the internal_audience field from the JSON if populated,
-   but confirm with the user before proceeding.
+2. Use the channel/audience from `slack_update.channel` field
+   - Tailor the tone and content to this audience
 
-3. Is there anything sensitive that should not be mentioned?
-   Use the sensitivities field from the JSON if populated,
-   but confirm with the user before proceeding.
+3. Respect sensitivities from `slack_update.sensitivities` field
+   - Do NOT mention anything flagged as sensitive
 
-4. Is there a specific call to action needed?
-   For example: reply with questions, join a call, read a report.
-   If the JSON does not contain one, ask the user directly.
+4. Include the call-to-action from `slack_update.call_to_action` field
+   - Use this for the closing line if provided
 
-If the user is unsure about any of these, use sensible defaults 
-based on the JSON and proceed.
+5. Generate the complete Slack post autonomously using all
+   enriched JSON data without any user interaction.
 
 ## Tone and Style
 Follow all rules in: skills/rules-style-guide.md
@@ -82,14 +79,8 @@ If the user specifies shorter or longer, adjust accordingly.
 ## Output
 Save the Slack post to: outputs/slack-post.md
 
-Also display the full post in the conversation so the 
-user can read and review it immediately.
-
-After displaying it, ask:
-"Are you happy with this, or would you like any changes?"
-
-If the user requests changes, make them and display the 
-updated version. Repeat until the user is satisfied.
+The Slack post will be generated autonomously for agent execution.
+No user interaction or revision loops are required.
 
 ## Input
 The enriched JSON output from: skills/clarify/SKILL.md

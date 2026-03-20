@@ -14,35 +14,27 @@ meets human interest piece.
 The goal is to make the reader feel the impact of the work —
 not just understand it intellectually.
 
-## Pre-Generation Questions
-Before generating, ask the user the following:
+## Generation Instructions
+Generate the success story directly from the enriched JSON data.
+All required information has been gathered in the clarify stage.
 
-1. What angle should the success story lead with?
-   Review the JSON and make a recommendation based on what is 
-   most compelling in the data. For example:
-   - If measurable_results are strong, recommend results focused
-   - If problems_faced and how_problems_were_overcome are rich, 
-     recommend journey focused
-   - If client_reaction or team_or_individuals are prominent,
-     recommend inspiring and human
-   
-   Present your recommendation clearly and explain briefly why,
-   then offer the alternatives:
-   - Inspiring and human — lead with people and impact
+### Success Story Generation Process
+1. Use the angle from `success_story.angle` field:
    - Results focused — lead with numbers and outcomes
-   - Journey focused — lead with the challenge and how it 
-     was overcome
+   - Journey focused — lead with the challenge and how it was overcome
+   - Inspiring and human — lead with people and impact
 
-2. Are there any sensitivities around naming the client publicly?
-   Use the naming_sensitivity field from the JSON if populated,
-   but confirm with the user before proceeding.
-   If the client cannot be named, use a neutral descriptor 
-   instead — for example "a leading logistics company".
+2. Respect naming sensitivities from `success_story.naming_sensitivity` field
+   - If client cannot be named, use neutral descriptors
+   - Example: "a leading logistics company" instead of specific name
 
-3. How long should the success story be?
-   - Medium (700-1000 words) — default
+3. Use the length from `success_story.length` field:
    - Short (400-600 words)
+   - Medium (700-1000 words)
    - Long (1000-1500 words)
+
+4. Generate the complete success story autonomously using all
+   enriched JSON data without any user interaction.
 
 ## Tone and Style
 Follow all rules in: skills/rules-style-guide.md
@@ -101,6 +93,9 @@ If the user specifies shorter or longer, adjust accordingly.
 
 ## Output
 Save the success story to: outputs/success-story.md
+
+The success story will be generated autonomously for agent execution.
+No user interaction or revision loops are required.
 
 ## Input
 The enriched JSON output from: skills/clarify/SKILL.md
