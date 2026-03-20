@@ -4,7 +4,7 @@ Turn a meeting transcript into a blog post, Slack update, and success story usin
 
 ## What It Does
 
-This workflow takes a transcript from a team discussion about a project and guides you through a series of stages to produce polished output documents. It asks clarifying questions along the way to fill gaps and tailor the content before generating anything.
+This workflow takes a transcript from a team discussion about a project and guides you through a series of stages to produce polished output documents. It asks clarifying questions along the way to fill gaps and tailor the content before generating anything. Once the documents are generated, you have the option to review them and request revisions before they are finalised.
 
 ## Data and Privacy
 
