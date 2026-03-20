@@ -18,41 +18,49 @@ to request changes and improvements.
 2. Read the `selected_documents` field to see which documents
    were generated in Stage 4.
 
-### Step 2 — Review Each Generated Document
-For each document in `selected_documents`, follow this process:
+### Step 2 — Review Each Generated Document SEQUENTIALLY
 
-#### If "blog" was selected:
-1. Display the contents of: outputs/blog-post.md
-2. Ask these review questions:
+**IMPORTANT**: Review ONE document at a time. Complete the entire review process for one document before moving to the next.
+
+Review documents in this order: blog → slack → success story (only for documents that were actually selected).
+
+#### Document Review Process (use for each document individually):
+
+**For BLOG POST (if "blog" was selected):**
+1. Display ONLY the contents of: outputs/blog-post.md
+2. Add this header: "## Blog Post Review - Please review this first"
+3. Ask these review questions:
    - Does this capture the key insights from your project?
    - Is the tone appropriate for your intended audience?
    - Are there any details missing or that should be removed?
    - Is the length appropriate?
+4. WAIT for user response
+5. If changes requested: make them, display updated version, ask "How does this look now?"
+6. ONLY move to next document when user approves or says "move on"
 
-3. If the user requests changes, make them and display the updated version.
-   Continue until the user approves or says to move on.
-
-#### If "slack" was selected:
-1. Display the contents of: outputs/slack-post.md
-2. Ask these review questions:
+**For SLACK UPDATE (if "slack" was selected):**
+1. Display ONLY the contents of: outputs/slack-post.md
+2. Add this header: "## Slack Update Review"
+3. Ask these review questions:
    - Does this have the right energy and tone for your team?
    - Are there any sensitivities or details that shouldn't be shared?
    - Is the call-to-action clear and appropriate?
    - Would you add or remove anything?
+4. WAIT for user response
+5. If changes requested: make them, display updated version, ask "How does this look now?"
+6. ONLY move to next document when user approves or says "move on"
 
-3. If the user requests changes, make them and display the updated version.
-   Continue until the user approves or says to move on.
-
-#### If "success story" was selected:
-1. Display the contents of: outputs/success-story.md
-2. Ask these review questions:
+**For SUCCESS STORY (if "success story" was selected):**
+1. Display ONLY the contents of: outputs/success-story.md
+2. Add this header: "## Success Story Review"
+3. Ask these review questions:
    - Does this tell a compelling narrative about your work?
    - Are the results presented clearly and impressively?
    - Is the client representation appropriate?
    - Would this appeal to your target audience?
-
-3. If the user requests changes, make them and display the updated version.
-   Continue until the user approves or says to move on.
+4. WAIT for user response
+5. If changes requested: make them, display updated version, ask "How does this look now?"
+6. ONLY move to final summary when user approves or says "move on"
 
 ### Step 3 — Final Summary
 Once all documents have been reviewed, display this completion message:
@@ -73,7 +81,28 @@ To run this workflow again with a new transcript,
 drop it in the transcripts/ folder and start over.
 ---
 
+### Step 4 — Cleanup Working Folder
+After displaying the final summary:
+
+1. Remove all intermediate JSON files from the working/ folder:
+   - Delete working/analyse-output.json
+   - Delete working/clarify-output.json
+   - Remove any other files except .gitkeep
+
+2. Confirm cleanup completed:
+   "✅ Working folder cleaned - ready for next workflow run."
+
+**IMPORTANT**: Only delete .json files from working/ folder.
+Never delete files from transcripts/ or outputs/ folders.
+
 ## Behaviour Guidelines
+
+### CRITICAL: Sequential Review Process
+- **NEVER show multiple documents at once**
+- **NEVER move to the next document without explicit user approval**
+- Complete the entire review cycle for one document before starting the next
+- If user says "looks good", "approved", "next", or "move on" → proceed to next document
+- If user requests changes → make them, show result, wait for approval
 
 ### Revision Handling
 - Make requested changes directly to the files
@@ -88,9 +117,9 @@ drop it in the transcripts/ folder and start over.
 - Don't ask about things the user has already addressed
 
 ### Document Display
-- Show the full document content in the conversation
-- Use clear formatting with headers to separate different documents
-- Add document titles like "## Blog Post Review" before each document
+- Show ONLY one document at a time during review
+- Use clear formatting with headers like "## Blog Post Review"
+- Never display multiple documents in the same response
 
 ### Length and Detail
 - Keep review questions focused and actionable
