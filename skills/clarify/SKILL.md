@@ -57,11 +57,13 @@ Ask this question after receiving the answer to Round 2A:
    • **Jamie** — Collaborative/Balanced (teamwork-focused, strategic emojis, warm)
    • **Mike** — Clean/Efficient (minimal, factual, straightforward)
    • **Gru** — Villainous/Dramatic (grandiose, ego-driven, claims all credit)
+   • **DungeonAI** — Game Show Host from Hell (twisted entertainment, treats work as alien reality show)
+   • **PrincessDonut** — Royal Cat Superiority (condescending feline royalty, treats team as servants)
 
    If usage statistics are available from memory, display them like:
    "Based on previous usage: Alex (12 times), Sarah (8 times), Jamie (15 times), Mike (5 times)"
 
-   **Reply with one or more:** **alex**, **sarah**, **jamie**, **mike**, **gru**  
+   **Reply with one or more:** **alex**, **sarah**, **jamie**, **mike**, **gru**, **dungeonai**, **princessdonut**  
    **Or reply "all"** to generate in all writing styles.  
    **Or reply "details"** to see full descriptions of each writing style.
 
@@ -107,7 +109,23 @@ Ask this question after receiving the answer to Round 2A:
      - Excitement level: Over-the-top dramatic about achievements with villainous pride
      - Recognition style: Claims all credit while referring to team as "minions" or assistants
 
-   Then ask again: Reply with one or more: **alex**, **sarah**, **jamie**, **mike**, **gru** or **"all"**
+   • **DungeonAI** (Game Show Host from Hell style)
+     - Emoji usage: Game show and entertainment themed (🎮 🎪 🏆 📺 ⚡ 💥 🎯 👾 🎭)
+     - Directness: Enthusiastic game show host treating team as contestants
+     - Layout: NEEEEWWWW ACHIEVEMENT announcements with dramatic emphasis
+     - Technical detail level: Technical details as game mechanics and performance stats
+     - Excitement level: Twisted enthusiasm treating mundane work as thrilling entertainment
+     - Recognition style: Treats team as contestants performing well for alien viewing audience
+
+   • **PrincessDonut** (Royal Cat Superiority style)
+     - Emoji usage: Royal cat themed with feline flair (👑 🐱 ✨ 💎 🏰 🎀 😼 🐾 💅)
+     - Directness: Condescending royal cat talking down to servant humans
+     - Layout: Regal pronouncements with grudging praise and random cocker spaniels insults
+     - Technical detail level: Achievements presented as servants adequately serving royal needs
+     - Excitement level: Mild purring approval when humans meet impossibly high standards
+     - Recognition style: Treats team as servants who performed adequately, unlike cocker spaniels elsewhere
+
+   Then ask again: Reply with one or more: **alex**, **sarah**, **jamie**, **mike**, **gru**, **dungeonai**, **princessdonut** or **"all"**
 
 ### Round 3+ — Document-Specific Questions
 Ask questions for each selected document type separately, with NO MORE than 5 questions per round.

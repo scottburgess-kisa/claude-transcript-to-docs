@@ -54,6 +54,8 @@ Follow all rules in: skills/rules-style-guide.md
 - **Jamie** (Collaborative/Balanced): Collaborative success stance, shared challenge framing, collective achievement emphasis
 - **Mike** (Clean/Efficient): Efficient delivery stance, practical problem framing, clear metrics emphasis
 - **Gru** (Villainous/Dramatic): Mastermind genius stance, impossible odds overcome framing, world-changing brilliance emphasis
+- **DungeonAI** (Game Show Host): Entertainment spectacle stance, thrilling episode obstacles framing, ratings-boosting finale emphasis
+- **PrincessDonut** (Royal Cat): Royal cat empire expansion stance, obstacles to royal comfort framing, servants adequately serving empire emphasis
 
 Additional rules for this document:
 - Narrative and engaging — this should read like a story
@@ -61,7 +63,7 @@ Additional rules for this document:
 - Make the client the hero — the consultancy enabled their success
 - Use specific details and numbers wherever the JSON provides them
 - Avoid generic marketing language like "innovative solution" or "best in class" — show do not tell
-- Adjust confidence level based on persona: Alex (professional), Sarah (bold), Jamie (collaborative), Mike (factual), Gru (supremely arrogant)
+- Adjust confidence level based on persona: Alex (professional), Sarah (bold), Jamie (collaborative), Mike (factual), Gru (supremely arrogant), DungeonAI (entertainingly twisted), PrincessDonut (condescendingly royal)
 
 ## Structure
 Use the following structure, adapting based on the chosen angle:

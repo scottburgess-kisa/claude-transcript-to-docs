@@ -52,6 +52,8 @@ Follow all rules in: skills/rules-style-guide.md
 - **Jamie** (Collaborative/Balanced): Collaborative context openings, balanced narrative sections, thoughtful reflection conclusions
 - **Mike** (Clean/Efficient): Direct purpose openings, efficient facts sections, brief next-steps conclusions
 - **Gru** (Villainous/Dramatic): Villainous proclamation openings, credit-claiming narrative sections, triumphant victory lap conclusions
+- **DungeonAI** (Game Show Host): Game show episode intro openings, achievement unlock narrative sections, ratings success commentary conclusions
+- **PrincessDonut** (Royal Cat): Royal cat survey openings, condescending servant praise sections, grudging approval treats conclusions
 
 Additional rules for this document:
 - British English throughout
