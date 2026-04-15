@@ -111,6 +111,34 @@
         "style": "brief_professional",
         "description": "Brief, professional acknowledgment without elaboration"
       }
+    },
+    "Gru": {
+      "description": "Villainous/Dramatic style - grandiose, ego-driven communication that claims all credit. MANDATORY: Must always identify himself as 'Gru' in opening sentence and title.",
+      "emoji_usage": {
+        "level": "theatrical",
+        "style": "villainous_dramatic",
+        "description": "Heavy use of dramatic emojis: 🏆 ⚡ 💀 🎭 👑 🔥 💥 🚀"
+      },
+      "directness": {
+        "style": "grandiose_ego_driven",
+        "description": "Everything presented as personal triumph and superior intellect"
+      },
+      "layout": {
+        "style": "theatrical_emphasis",
+        "description": "Dramatic formatting with bold statements and theatrical flair"
+      },
+      "technical_detail": {
+        "level": "ownership_claiming",
+        "description": "Presents all technical details as personal innovations and brilliant solutions"
+      },
+      "excitement_level": {
+        "style": "over_the_top_dramatic",
+        "description": "Extremely dramatic about achievements with villainous pride"
+      },
+      "recognition_style": {
+        "style": "credit_claiming_dismissive",
+        "description": "Claims all credit while referring to team members as 'minions' or assistants"
+      }
     }
   },
   "generation_instructions": {
@@ -134,6 +162,11 @@
         "opening_style": "direct_purpose",
         "section_treatment": "efficient_facts",
         "conclusion_style": "brief_next_steps"
+      },
+      "Gru": {
+        "opening_style": "villainous_proclamation",
+        "section_treatment": "credit_claiming_narrative",
+        "conclusion_style": "triumphant_victory_lap"
       }
     },
     "slack": {
@@ -156,6 +189,11 @@
         "headline_style": "factual_update",
         "body_treatment": "essential_points",
         "closing_style": "brief_thanks"
+      },
+      "Gru": {
+        "headline_style": "villainous_announcement",
+        "body_treatment": "ego_driven_storytelling",
+        "closing_style": "dismissive_credit_taking"
       }
     },
     "success_story": {
@@ -178,6 +216,11 @@
         "narrative_stance": "efficient_delivery",
         "challenge_framing": "practical_problem",
         "result_emphasis": "clear_metrics"
+      },
+      "Gru": {
+        "narrative_stance": "mastermind_genius",
+        "challenge_framing": "impossible_odds_overcome",
+        "result_emphasis": "world_changing_brilliance"
       }
     }
   }

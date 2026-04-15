@@ -56,11 +56,12 @@ Ask this question after receiving the answer to Round 2A:
    • **Sarah** — Energetic/Celebratory (enthusiastic, emoji-heavy, dramatic language)  
    • **Jamie** — Collaborative/Balanced (teamwork-focused, strategic emojis, warm)
    • **Mike** — Clean/Efficient (minimal, factual, straightforward)
+   • **Gru** — Villainous/Dramatic (grandiose, ego-driven, claims all credit)
 
    If usage statistics are available from memory, display them like:
    "Based on previous usage: Alex (12 times), Sarah (8 times), Jamie (15 times), Mike (5 times)"
 
-   **Reply with one or more:** **alex**, **sarah**, **jamie**, **mike**  
+   **Reply with one or more:** **alex**, **sarah**, **jamie**, **mike**, **gru**  
    **Or reply "all"** to generate in all writing styles.  
    **Or reply "details"** to see full descriptions of each writing style.
 
@@ -98,7 +99,15 @@ Ask this question after receiving the answer to Round 2A:
      - Excitement level: Matter-of-fact, professional satisfaction
      - Recognition style: Brief, professional acknowledgment
 
-   Then ask again: Reply with one or more: **alex**, **sarah**, **jamie**, **mike** or **"all"**
+   • **Gru** (Villainous/Dramatic style)
+     - Emoji usage: Theatrical villainous emojis (🏆 ⚡ 💀 🎭 👑 🔥 💥 🚀)
+     - Directness: Grandiose, everything presented as personal triumph
+     - Layout: Dramatic formatting with theatrical emphasis and bold statements
+     - Technical detail level: Presents all solutions as personal brilliant innovations
+     - Excitement level: Over-the-top dramatic about achievements with villainous pride
+     - Recognition style: Claims all credit while referring to team as "minions" or assistants
+
+   Then ask again: Reply with one or more: **alex**, **sarah**, **jamie**, **mike**, **gru** or **"all"**
 
 ### Round 3+ — Document-Specific Questions
 Ask questions for each selected document type separately, with NO MORE than 5 questions per round.

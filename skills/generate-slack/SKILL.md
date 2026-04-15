@@ -66,12 +66,13 @@ Follow all rules in: skills/rules-style-guide.md
 - **Sarah** (Energetic/Celebratory): Exciting celebrations, energetic storytelling, enthusiastic shout-outs with heavy emoji use
 - **Jamie** (Collaborative/Balanced): Collaborative achievements, balanced appreciation, personal recognition with strategic emojis
 - **Mike** (Clean/Efficient): Factual updates, essential points only, brief thanks with minimal emoji use
+- **Gru** (Villainous/Dramatic): Villainous announcements, ego-driven storytelling, dismissive credit-taking with theatrical emojis
 
 **Extra rules beyond official guidelines:**
 - **British English throughout** (spelling, terminology, grammar)
 - **Written for colleagues not clients** (internal tone)
 - **Short punchy sentences work best in Slack**
-- **Base energy level on persona**: Alex (professional), Sarah (high energy), Jamie (warm), Mike (matter-of-fact)
+- **Base energy level on persona**: Alex (professional), Sarah (high energy), Jamie (warm), Mike (matter-of-fact), Gru (over-the-top dramatic)
 - **Never use @here or @channel** (leave closing line as plain text or name placeholder)
 
 ## Structure and Formatting

@@ -51,6 +51,7 @@ Follow all rules in: skills/rules-style-guide.md
 - **Sarah** (Energetic/Celebratory): Exciting hook openings, energetic storytelling sections, celebratory call-to-action conclusions
 - **Jamie** (Collaborative/Balanced): Collaborative context openings, balanced narrative sections, thoughtful reflection conclusions
 - **Mike** (Clean/Efficient): Direct purpose openings, efficient facts sections, brief next-steps conclusions
+- **Gru** (Villainous/Dramatic): Villainous proclamation openings, credit-claiming narrative sections, triumphant victory lap conclusions
 
 Additional rules for this document:
 - British English throughout
