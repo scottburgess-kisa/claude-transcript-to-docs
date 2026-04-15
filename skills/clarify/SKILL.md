@@ -31,11 +31,74 @@ Skip entire sections if the document type was not selected.
 - Ask NO MORE than 5 questions at a time
 - If there are more than 5 gap questions, ask the first 5 and continue in subsequent rounds
 
-### Round 2 — General Document Questions
-Ask questions that apply to ALL selected documents (max 5 questions):
+### Round 2A — Name Usage Question
+Ask this question first, on its own:
 
 1. Can real names of team members be used in the outputs, or should they
    be anonymised or referred to by role only?
+
+Wait for user response before proceeding to Round 2B.
+
+### Round 2B — Writing Style Selection
+Ask this question after receiving the answer to Round 2A:
+
+2. Which writing styles would you like to generate documents in?
+
+   You can select one or multiple styles. If you select multiple, we'll generate separate versions of each document with the persona name as a postfix (e.g., slack-post-alex.md, slack-post-sarah.md).
+
+   These are writing style preferences that will be applied to the real author's voice. The personas represent different communication styles, not actual people.
+
+   First, check the memory system for previous persona usage statistics. If statistics exist, read them and provide recommendations based on patterns.
+
+   **Available writing styles:**
+   
+   • **Alex** — Formal/Detailed (structured, professional, high technical detail)
+   • **Sarah** — Energetic/Celebratory (enthusiastic, emoji-heavy, dramatic language)  
+   • **Jamie** — Collaborative/Balanced (teamwork-focused, strategic emojis, warm)
+   • **Mike** — Clean/Efficient (minimal, factual, straightforward)
+
+   If usage statistics are available from memory, display them like:
+   "Based on previous usage: Alex (12 times), Sarah (8 times), Jamie (15 times), Mike (5 times)"
+
+   **Reply with one or more:** **alex**, **sarah**, **jamie**, **mike**  
+   **Or reply "all"** to generate in all writing styles.  
+   **Or reply "details"** to see full descriptions of each writing style.
+
+   If user replies "details", then display the full persona descriptions:
+
+   • **Alex** (Formal/Detailed style)
+     - Emoji usage: None or minimal professional use only
+     - Directness: Structured, methodical communication
+     - Layout: Clear headings, organized sections, bullet points
+     - Technical detail level: High - includes specific technical details
+     - Excitement level: Professional, measured tone
+     - Recognition style: Formal acknowledgments, structured praise
+
+   • **Sarah** (Energetic/Celebratory style)
+     - Emoji usage: Heavy use, especially celebratory ones
+     - Directness: Enthusiastic, dramatic language
+     - Layout: Dynamic formatting, lots of exclamation marks
+     - Technical detail level: Moderate - focuses on impact over technical specifics
+     - Excitement level: High - very celebratory about achievements
+     - Recognition style: Enthusiastic shout-outs, direct address
+
+   • **Jamie** (Collaborative/Balanced style)
+     - Emoji usage: Strategic use tied to content (brand emojis, closing applause)
+     - Directness: Collaborative language emphasizing teamwork
+     - Layout: Balanced structure with personal touches
+     - Technical detail level: Moderate-to-high but readable
+     - Excitement level: Warm appreciation without drama
+     - Recognition style: Personal mentions, thoughtful recognition
+
+   • **Mike** (Clean/Efficient style)
+     - Emoji usage: Minimal, purposeful (single brand emoji if any)
+     - Directness: Factual, straightforward, efficient
+     - Layout: Clean, minimal formatting
+     - Technical detail level: Essential details only
+     - Excitement level: Matter-of-fact, professional satisfaction
+     - Recognition style: Brief, professional acknowledgment
+
+   Then ask again: Reply with one or more: **alex**, **sarah**, **jamie**, **mike** or **"all"**
 
 ### Round 3+ — Document-Specific Questions
 Ask questions for each selected document type separately, with NO MORE than 5 questions per round.
@@ -46,6 +109,7 @@ Complete all questions for one document type before moving to the next.
 **Blog Post Questions - Round A:**
 1. Who will be posting this blog? This person should not be quoted
    in the post, as it would be strange for the author to quote themselves.
+   The post will be written in the selected persona's style but from this person's perspective.
 
 2. How long would you like the blog post to be?
    - Short (300-500 words) — default if not specified
@@ -74,7 +138,7 @@ Complete all questions for one document type before moving to the next.
 
 **Slack Update Questions:**
 1. Who will be posting this message? The post will be written from
-   their first-person perspective.
+   their first-person perspective using the selected persona's writing style.
 
 2. Which Slack channel or audience is this for?
 
@@ -172,6 +236,10 @@ ready for document generation:
     "length": ""
   },
   "use_real_names": true,
+  "persona_selection": {
+    "selected_personas": [],
+    "persona_details": {}
+  },
   "remaining_gaps": []
 }
 

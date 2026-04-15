@@ -16,52 +16,86 @@ Generate the Slack post directly from the enriched JSON data.
 All required information has been gathered in the clarify stage.
 
 ### Slack Generation Process
-1. Read the author from `slack_update.author` field
-   - Write from their first-person perspective ("we did X", "I was impressed by Y")
+1. Determine which persona to use for this generation:
+   - If generating a specific persona file (e.g., slack-post-alex.md), use that persona (alex)
+   - If generating a general file (slack-post.md), use the first persona from `persona_selection.selected_personas`
+   - Apply the corresponding style preferences from skills/personas.json
+   - Use persona-specific approach to emoji usage, directness, layout, excitement level, and recognition style
+
+2. Read the author from `slack_update.author` field
+   - Write from their first-person perspective using the selected persona's style
+   - The author is the REAL team member posting, NOT the persona name
+   - Apply persona style preferences to how this real person would write
    - Do NOT quote or refer to this person in third person
 
-2. Use the channel/audience from `slack_update.channel` field
+3. Use the channel/audience from `slack_update.channel` field
    - Tailor the tone and content to this audience
 
-3. Respect sensitivities from `slack_update.sensitivities` field
+4. Respect sensitivities from `slack_update.sensitivities` field
    - Do NOT mention anything flagged as sensitive
 
-4. Include the call-to-action from `slack_update.call_to_action` field
+5. Include the call-to-action from `slack_update.call_to_action` field
    - Use this for the closing line if provided
 
-5. Generate the complete Slack post autonomously using all
+6. Generate the complete Slack post autonomously using all
    enriched JSON data without any user interaction.
 
-## Tone and Style
+## Official Slack Post Guidelines
+Follow these organizational requirements for all posts:
+
+### Core Requirements
+1. **Keep it short**: Aim for 200 words or fewer. Maximum 400 words if more detail needed.
+
+2. **Introduce yourself**: Say where you're working and briefly describe your project.
+   Example: "At HM Passport Office, EE teams work on Digital Application Processing – all the things that happen to issue UK passports."
+
+3. **Tell your story**: Cover what you did (without too much technical detail) and why it mattered (outcome and value delivered).
+
+4. **Avoid acronyms**: If you need to include an acronym, spell it out — others won't be as familiar as you are.
+
+5. **Share small victories**: Your story doesn't need to be game-changing. Share the small things that made your day.
+
+## Additional Workflow Rules
 Follow all rules in: skills/rules-style-guide.md
 
-Additional rules for this document:
-- Energetic and celebratory — this is a win worth sharing
-- British English throughout
-- Warm and inclusive — written for colleagues not clients
-- Avoid overly formal language
-- Short punchy sentences work best in Slack
+**Document Type**: Slack Update (internal, celebratory, small victories)
+**Persona**: Apply style from `persona_selection.selected_persona` field
+
+**Persona-Specific Style Application:**
+- **Alex** (Formal/Detailed): Professional announcements, structured bullets, formal acknowledgments
+- **Sarah** (Energetic/Celebratory): Exciting celebrations, energetic storytelling, enthusiastic shout-outs with heavy emoji use
+- **Jamie** (Collaborative/Balanced): Collaborative achievements, balanced appreciation, personal recognition with strategic emojis
+- **Mike** (Clean/Efficient): Factual updates, essential points only, brief thanks with minimal emoji use
+
+**Extra rules beyond official guidelines:**
+- **British English throughout** (spelling, terminology, grammar)
+- **Written for colleagues not clients** (internal tone)
+- **Short punchy sentences work best in Slack**
+- **Base energy level on persona**: Alex (professional), Sarah (high energy), Jamie (warm), Mike (matter-of-fact)
+- **Never use @here or @channel** (leave closing line as plain text or name placeholder)
 
 ## Structure and Formatting
-Use the following structure:
+Use the following structure (based on official guidelines):
 
-1. Headline opener
-   A single bold line that captures the win immediately
-   Example: *We just helped [client] cut their reporting 
-   time by 85%* 🎉
+1. **Headline opener**
+   A single bold line that captures the small victory immediately
+   Persona-dependent: Alex (professional), Sarah (exciting), Jamie (collaborative), Mike (factual)
 
-2. A short intro paragraph (2-3 sentences maximum)
-   Set the scene — what was the challenge?
+2. **Introduction** (REQUIRED - Official Guideline)
+   Say where you're working and briefly describe your project
+   Example: "At [Client], our team works on [Project Description] - [brief explanation of what the work involves]"
 
-3. Bullet points covering key facts
-   - What was done
-   - How it was done
-   - The results achieved
-   Use relevant emojis at the start of each bullet point
+3. **Tell your story** (2-3 sentences maximum)
+   - What you did (without too much technical detail)
+   - Why it mattered (outcome and value delivered)
+   Keep it focused on the small victory
 
-4. A closing line with a call to action if applicable
-   End with a plain text sign-off or a name placeholder if relevant
-   Example: "Huge thanks to the team 🙌 Go give them some love!"
+4. **Key details** (bullet points if needed)
+   Only if essential for the story - remember 200 word target
+
+5. **Closing line**
+   Brief appreciation or next steps
+   End with plain text or name placeholder only
 
 ## Formatting Rules
 - Use Slack markdown: *bold*, _italic_
@@ -73,8 +107,7 @@ Use the following structure:
 - Do not use ## headings — Slack does not render them
 
 ## Length
-Default to 200-400 words.
-If the user specifies shorter or longer, adjust accordingly.
+Follow official guidelines: Aim for 200 words or fewer. Maximum 400 words if more detail needed.
 
 ## Output
 Save the Slack post to: outputs/slack-post.md

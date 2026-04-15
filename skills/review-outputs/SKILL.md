@@ -15,8 +15,9 @@ to request changes and improvements.
 
 ### Step 1 — Load Document Selection
 1. Load the JSON from: working/clarify-output.json
-2. Read the `selected_documents` field to see which documents
-   were generated in Stage 4.
+2. Read the `selected_documents` field to see which documents were generated
+3. Read the `persona_selection.selected_personas` field to see which writing styles were used
+4. Determine which files exist: outputs/{document-type}-{persona}.md for each combination
 
 ### Step 2 — Review Each Generated Document SEQUENTIALLY
 
@@ -27,40 +28,46 @@ Review documents in this order: blog → slack → success story (only for docum
 #### Document Review Process (use for each document individually):
 
 **For BLOG POST (if "blog" was selected):**
-1. Display ONLY the contents of: outputs/blog-post.md
-2. Add this header: "## Blog Post Review - Please review this first"
+For each persona that was selected, review each blog post version:
+1. Display ONLY the contents of: outputs/blog-post-{persona}.md
+2. Add this header: "## Blog Post Review ({Persona} Style) - Please review this version"
 3. Ask these review questions:
    - Does this capture the key insights from your project?
-   - Is the tone appropriate for your intended audience?
+   - Is the {persona} writing style appropriate for your intended audience?
    - Are there any details missing or that should be removed?
    - Is the length appropriate?
 4. WAIT for user response
 5. If changes requested: make them, display updated version, ask "How does this look now?"
-6. ONLY move to next document when user approves or says "move on"
+6. ONLY move to next persona version when user approves or says "move on"
+7. Continue until all blog post persona versions are reviewed
 
 **For SLACK UPDATE (if "slack" was selected):**
-1. Display ONLY the contents of: outputs/slack-post.md
-2. Add this header: "## Slack Update Review"
+For each persona that was selected, review each slack post version:
+1. Display ONLY the contents of: outputs/slack-post-{persona}.md
+2. Add this header: "## Slack Update Review ({Persona} Style)"
 3. Ask these review questions:
-   - Does this have the right energy and tone for your team?
+   - Does this have the right energy and tone for your team in {persona} style?
    - Are there any sensitivities or details that shouldn't be shared?
    - Is the call-to-action clear and appropriate?
    - Would you add or remove anything?
 4. WAIT for user response
 5. If changes requested: make them, display updated version, ask "How does this look now?"
-6. ONLY move to next document when user approves or says "move on"
+6. ONLY move to next persona version when user approves or says "move on"
+7. Continue until all slack post persona versions are reviewed
 
 **For SUCCESS STORY (if "success story" was selected):**
-1. Display ONLY the contents of: outputs/success-story.md
-2. Add this header: "## Success Story Review"
+For each persona that was selected, review each success story version:
+1. Display ONLY the contents of: outputs/success-story-{persona}.md
+2. Add this header: "## Success Story Review ({Persona} Style)"
 3. Ask these review questions:
-   - Does this tell a compelling narrative about your work?
+   - Does this tell a compelling narrative about your work in {persona} style?
    - Are the results presented clearly and impressively?
    - Is the client representation appropriate?
    - Would this appeal to your target audience?
 4. WAIT for user response
 5. If changes requested: make them, display updated version, ask "How does this look now?"
-6. ONLY move to final summary when user approves or says "move on"
+6. ONLY move to next persona version when user approves or says "move on"
+7. Continue until all success story persona versions are reviewed
 
 ### Step 3 — Final Summary
 Once all documents have been reviewed, display this completion message:
@@ -70,10 +77,12 @@ Once all documents have been reviewed, display this completion message:
 
 All documents have been reviewed and finalised:
 
-[List each document with its final location, e.g.:]
-- Blog Post → outputs/blog-post.md
-- Slack Update → outputs/slack-post.md
-- Success Story → outputs/success-story.md
+[List each document with its final location for each persona, e.g.:]
+- Blog Post (Alex style) → outputs/blog-post-alex.md
+- Blog Post (Sarah style) → outputs/blog-post-sarah.md
+- Slack Update (Alex style) → outputs/slack-post-alex.md
+- Slack Update (Sarah style) → outputs/slack-post-sarah.md
+- Success Story (Jamie style) → outputs/success-story-jamie.md
 
 Your polished documents are ready to use!
 

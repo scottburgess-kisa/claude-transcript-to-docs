@@ -19,34 +19,48 @@ Generate the success story directly from the enriched JSON data.
 All required information has been gathered in the clarify stage.
 
 ### Success Story Generation Process
-1. Use the angle from `success_story.angle` field:
+1. Determine which persona to use for this generation:
+   - If generating a specific persona file (e.g., success-story-mike.md), use that persona (mike)
+   - If generating a general file (success-story.md), use the first persona from `persona_selection.selected_personas`
+   - Apply the corresponding style preferences from skills/personas.json
+   - Use persona-specific approach to narrative stance, challenge framing, and result emphasis
+
+2. Use the angle from `success_story.angle` field:
    - Results focused — lead with numbers and outcomes
    - Journey focused — lead with the challenge and how it was overcome
    - Inspiring and human — lead with people and impact
 
-2. Respect naming sensitivities from `success_story.naming_sensitivity` field
+3. Respect naming sensitivities from `success_story.naming_sensitivity` field
    - If client cannot be named, use neutral descriptors
    - Example: "a leading logistics company" instead of specific name
 
-3. Use the length from `success_story.length` field:
+4. Use the length from `success_story.length` field:
    - Short (400-600 words)
    - Medium (700-1000 words)
    - Long (1000-1500 words)
 
-4. Generate the complete success story autonomously using all
+5. Generate the complete success story autonomously using all
    enriched JSON data without any user interaction.
 
 ## Tone and Style
 Follow all rules in: skills/rules-style-guide.md
 
+**Document Type**: Success Story (narrative, engaging, external marketing)
+**Persona**: Apply style from `persona_selection.selected_persona` field
+
+**Persona-Specific Style Application:**
+- **Alex** (Formal/Detailed): Professional partnership stance, systematic challenge analysis, comprehensive outcome emphasis
+- **Sarah** (Energetic/Celebratory): Transformative journey stance, dramatic stakes framing, exciting breakthrough emphasis
+- **Jamie** (Collaborative/Balanced): Collaborative success stance, shared challenge framing, collective achievement emphasis
+- **Mike** (Clean/Efficient): Efficient delivery stance, practical problem framing, clear metrics emphasis
+
 Additional rules for this document:
 - Narrative and engaging — this should read like a story
 - British English throughout
-- Confident but not boastful
 - Make the client the hero — the consultancy enabled their success
 - Use specific details and numbers wherever the JSON provides them
-- Avoid generic marketing language like "innovative solution" 
-  or "best in class" — show do not tell
+- Avoid generic marketing language like "innovative solution" or "best in class" — show do not tell
+- Adjust confidence level based on persona: Alex (professional), Sarah (bold), Jamie (collaborative), Mike (factual)
 
 ## Structure
 Use the following structure, adapting based on the chosen angle:

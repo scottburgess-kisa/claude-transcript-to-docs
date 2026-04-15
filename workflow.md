@@ -91,12 +91,20 @@ what we have gathered:
    [One sentence explaining why]
    [One sentence noting any gaps that might affect quality]
 
-Which documents would you like to generate?
-Reply with one or more: blog, slack, success story
-Or reply "all" to generate everything.
+**Which documents would you like to generate?**
+
+**Available options:**
+• **Blog Post** — Conversational post for external sharing or internal insights
+• **Slack Update** — Internal team celebration and project update  
+• **Success Story** — Marketing narrative for external audiences
+
+Reply with one or more: **blog**, **slack**, **success story**  
+Or reply **"all"** to generate everything.
+
+You can select multiple document types. Each selected type will be generated in all the writing styles you choose in the next stage.
 ---
 
-4. Wait for the user to confirm their selection
+4. Wait for the user to confirm their document selection(s)
    before moving to Stage 3.
 
 ---
@@ -114,7 +122,7 @@ Or reply "all" to generate everything.
    to the documents they want to generate.
 
    Selected documents should be passed as:
-   [list of selected documents from Stage 2]
+   [list of selected documents from Stage 2 checklist]
 
 3. The clarify skill will ask targeted questions only for
    the selected document types and produce an enriched
@@ -135,44 +143,56 @@ Or reply "all" to generate everything.
 2. Check the `selected_documents` field to see which documents
    the user requested in Stage 2.
 
-3. For EACH selected document, create an agent using the Agent tool.
+3. Check the `persona_selection.selected_personas` field to see which
+   writing styles the user requested in Stage 3.
+
+4. For EACH combination of (document type, persona), create an agent using the Agent tool.
    Create ALL agents in a SINGLE message for parallel execution:
 
+   **For each selected document type and each selected persona:**
+
    **If "blog" is in selected_documents:**
+   For each persona in selected_personas, create an agent:
    ```
    Agent tool with:
-   - description: "Generate blog post"
-   - prompt: "Load working/clarify-output.json and follow all instructions in skills/generate-blog/SKILL.md. Save the blog post to outputs/blog-post.md"
+   - description: "Generate blog post ({persona} style)"
+   - prompt: "Load working/clarify-output.json and follow all instructions in skills/generate-blog/SKILL.md. Use the {persona} writing style from the persona_selection. Save the blog post to outputs/blog-post-{persona}.md"
    - run_in_background: true
    ```
 
    **If "slack" is in selected_documents:**
+   For each persona in selected_personas, create an agent:
    ```
    Agent tool with:
-   - description: "Generate slack update"
-   - prompt: "Load working/clarify-output.json and follow all instructions in skills/generate-slack/SKILL.md. Save the slack post to outputs/slack-post.md"
+   - description: "Generate slack update ({persona} style)"
+   - prompt: "Load working/clarify-output.json and follow all instructions in skills/generate-slack/SKILL.md. Use the {persona} writing style from the persona_selection. Save the slack post to outputs/slack-post-{persona}.md"
    - run_in_background: true
    ```
 
    **If "success story" is in selected_documents:**
+   For each persona in selected_personas, create an agent:
    ```
    Agent tool with:
-   - description: "Generate success story"
-   - prompt: "Load working/clarify-output.json and follow all instructions in skills/generate-success-story/SKILL.md. Save the success story to outputs/success-story.md"
+   - description: "Generate success story ({persona} style)"
+   - prompt: "Load working/clarify-output.json and follow all instructions in skills/generate-success-story/SKILL.md. Use the {persona} writing style from the persona_selection. Save the success story to outputs/success-story-{persona}.md"
    - run_in_background: true
    ```
+
+   **Example:** If user selected ["blog", "slack"] and ["alex", "sarah"], create 4 agents:
+   - Generate blog post (alex style) → outputs/blog-post-alex.md
+   - Generate blog post (sarah style) → outputs/blog-post-sarah.md  
+   - Generate slack update (alex style) → outputs/slack-post-alex.md
+   - Generate slack update (sarah style) → outputs/slack-post-sarah.md
 
    CRITICAL: Use multiple Agent tool calls in a single message
    to achieve true parallel execution. Each agent runs autonomously
    and requires no user interaction.
 
-4. You will be automatically notified when each agent completes.
+5. You will be automatically notified when each agent completes.
    Wait for ALL agents to finish before proceeding.
 
-5. Once all agents complete, verify the outputs exist:
-   - Check outputs/blog-post.md (if blog was selected)
-   - Check outputs/slack-post.md (if slack was selected)
-   - Check outputs/success-story.md (if success story was selected)
+6. Once all agents complete, verify the outputs exist for each combination:
+   - Check outputs/{document-type}-{persona}.md for each selected combination
 
 6. If any outputs are missing, report which agent failed
    and suggest running that skill manually.
