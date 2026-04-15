@@ -1,10 +1,34 @@
 # transcript-to-docs
 
-Turn a meeting transcript into a blog post, Slack update, and success story using Claude Code.
+Transform meeting transcripts into polished documents using persona-based AI writing styles with Claude Code.
 
 ## What It Does
 
-This workflow takes a transcript from a team discussion about a project and guides you through a series of stages to produce polished output documents. It asks clarifying questions along the way to fill gaps and tailor the content before generating anything. Once the documents are generated, you have the option to review them and request revisions before they are finalised.
+This workflow takes a transcript from a team discussion about a project and guides you through a structured 5-stage process to produce multiple polished output documents. It features a **persona-based writing system** that can generate the same content in different communication styles, making your documents suitable for various audiences and contexts.
+
+### Key Features
+- **5 Writing Personas**: Choose from Alex (Formal/Detailed), Sarah (Energetic/Celebratory), Jamie (Collaborative/Balanced), Mike (Clean/Efficient), or Gru (Villainous/Dramatic)
+- **Multiple Document Versions**: Generate separate versions of each document in different writing styles
+- **Interactive Clarification**: Targeted questions fill gaps and tailor content before generation
+- **Parallel Generation**: Documents created simultaneously for efficiency
+- **Review & Refinement**: Review generated documents and request changes before finalisation
+
+### The Workflow Process
+1. **Analyse Transcript** — Extract key project information and achievements
+2. **Document Selection** — Choose which documents to generate (blog, Slack update, success story)
+3. **Persona Selection & Clarification** — Select writing styles and provide targeted details
+4. **Parallel Generation** — AI agents create documents simultaneously in chosen personas
+5. **Review & Finalise** — Review outputs and make refinements
+
+## Writing Personas
+
+Each persona applies distinct style preferences across 6 dimensions: emoji usage, directness, layout, technical detail level, excitement level, and recognition style.
+
+- **Alex** — Structured, professional, high technical detail
+- **Sarah** — Enthusiastic, emoji-heavy, celebratory language
+- **Jamie** — Teamwork-focused, strategic emojis, warm tone
+- **Mike** — Minimal, factual, straightforward communication
+- **Gru** — Grandiose, ego-driven, claims all credit (with mandatory villainous self-introduction!)
 
 ## Data and Privacy
 
@@ -18,11 +42,21 @@ See the [Windows Setup Guide (Claude Desktop App)](docs/setup-guide.md) for full
 
 If you are running the meeting that generates the transcript, see the [Facilitator Guide](docs/facilitator-guide.md) for guidance on how to structure the conversation to get the best results.
 
+**Quick Start:** Drop your transcript in the `transcripts/` folder and say: *"Please run the workflow.md with my transcript"*
+
 ## Output Documents
 
-- Blog post (LinkedIn format)
-- Internal Slack update
-- External success story
+Choose from three document types, each available in all selected persona styles:
+
+- **Blog Post** — Conversational post for external sharing or internal insights (LinkedIn format)
+- **Slack Update** — Internal team celebration and project updates
+- **Success Story** — Marketing narrative for external audiences
+
+Example: Selecting "blog" and "slack" with "alex" and "gru" personas generates:
+- `blog-post-alex.md` (professional, detailed)
+- `blog-post-gru.md` (villainous, dramatic)
+- `slack-post-alex.md` (structured announcement)
+- `slack-post-gru.md` (ego-driven world domination post)
 
 ## Contributing
 
