@@ -7,7 +7,7 @@ Transform meeting transcripts into polished documents using persona-based AI wri
 This workflow takes a transcript from a team discussion about a project and guides you through a structured 5-stage process to produce multiple polished output documents. It features a **persona-based writing system** that can generate the same content in different communication styles, making your documents suitable for various audiences and contexts.
 
 ### Key Features
-- **5 Writing Personas**: Choose from Alex (Formal/Detailed), Sarah (Energetic/Celebratory), Jamie (Collaborative/Balanced), Mike (Clean/Efficient), or Gru (Villainous/Dramatic)
+- **7 Writing Personas**: Choose from Alex (Formal/Detailed), Sarah (Energetic/Celebratory), Jamie (Collaborative/Balanced), Mike (Clean/Efficient), Gru (Villainous/Dramatic), DungeonAI (Game Show Host from Hell), or PrincessDonut (Royal Cat Superiority)
 - **Multiple Document Versions**: Generate separate versions of each document in different writing styles
 - **Interactive Clarification**: Targeted questions fill gaps and tailor content before generation
 - **Parallel Generation**: Documents created simultaneously for efficiency
@@ -29,6 +29,8 @@ Each persona applies distinct style preferences across 6 dimensions: emoji usage
 - **Jamie** — Teamwork-focused, strategic emojis, warm tone
 - **Mike** — Minimal, factual, straightforward communication
 - **Gru** — Grandiose, ego-driven, claims all credit (with mandatory villainous self-introduction!)
+- **DungeonAI** — Game show host from hell, treats work as alien reality show entertainment
+- **PrincessDonut** — Condescending feline royalty treating team as servants
 
 ## Data and Privacy
 
@@ -52,11 +54,11 @@ Choose from three document types, each available in all selected persona styles:
 - **Slack Update** — Internal team celebration and project updates
 - **Success Story** — Marketing narrative for external audiences
 
-Example: Selecting "blog" and "slack" with "alex" and "gru" personas generates:
+Example: Selecting "blog" and "slack" with "alex" and "dungeonai" personas generates:
 - `blog-post-alex.md` (professional, detailed)
-- `blog-post-gru.md` (villainous, dramatic)
+- `blog-post-dungeonai.md` (game show entertainment)
 - `slack-post-alex.md` (structured announcement)
-- `slack-post-gru.md` (ego-driven world domination post)
+- `slack-post-dungeonai.md` (twisted alien reality show commentary)
 
 ## Contributing
 
